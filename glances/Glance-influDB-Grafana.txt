@@ -291,4 +291,35 @@ Then click on Save & Test to connect to the data source. You should receive a fe
 
 21. After successfully importing the Glances dashboard, you should be able to watch graphs showing metrics from your server as provided by glances via influxdb.
 
+RESTFul API calls:
 
+Server side
+$ glances -w
+
+Client side
+
+http://{glances server IP@}:61208/api/3
+
+Example:
+
+$ curl http://localhost:61208/api/3/mem
+
+or
+
+$ http http://localhost:61208/api/3/mem
+
+$ curl http://localhost:61208/api/3/pluginslist
+
+$ curl http://localhost:61208/api/3/mem/used
+
+$ curl http://localhost:61208/api/3/processlist/pid
+
+$ curl http://localhost:61208/api/3/network/interface_name
+
+$ curl http://localhost:61208/api/3/network/interface_name/eth0
+
+$ curl http://localhost:61208/api/3/cpu/history
+
+$ curl http://localhost:61208/api/3/all/limits
+
+$ curl http://localhost:61208/api/3/network/interface_name/eth0
